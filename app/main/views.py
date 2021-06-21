@@ -8,22 +8,11 @@ def index():
     '''
     title = 'Home'
     return render_template('index.html', title=title)
-@main.route('/login')
-def login():
-    '''View the login page.
-    '''
-    title = 'Login'
-    return render_template('login.html', title=title)
 
-@main.route('/register')
-def register():
-    '''View the register page.
+@main.route('/info')
+def info():
+    '''View the index page.
     '''
-    title = 'Register'
-    return render_template('register.html', title=title)    
-@main.route('/contact')
-def contact():
-    '''View the contact page.
-    '''
-    title = 'Contact Us'
-    return render_template('contact.html', title=title)
+    title = 'Info'
+    return render_template('food_info.html', title=title)
+
