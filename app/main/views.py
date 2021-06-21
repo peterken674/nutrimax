@@ -14,3 +14,9 @@ def register():
     '''
     title = 'Register'
     return render_template('register.html', title=title)    
+@main.route('/contact')
+def contact():
+    '''View the contact page.
+    '''
+    title = 'Contact Us'
+    return render_template('contact.html', title=title)
