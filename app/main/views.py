@@ -7,3 +7,10 @@ def index():
     '''
     title = 'Home'
     return render_template('index.html', title=title)
+
+@main.route('/contact')
+def contact():
+    '''View the contact page.
+    '''
+    title = 'Contact Us'
+    return render_template('contact.html', title=title)
