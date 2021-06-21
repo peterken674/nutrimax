@@ -14,3 +14,10 @@ def login():
     '''
     title = 'Login'
     return render_template('login.html', title=title)
+
+@main.route('/contact')
+def contact():
+    '''View the contact page.
+    '''
+    title = 'Contact Us'
+    return render_template('contact.html', title=title)
