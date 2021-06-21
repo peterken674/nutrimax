@@ -7,3 +7,10 @@ def index():
     '''
     title = 'Home'
     return render_template('index.html', title=title)
+
+@main.route('/register')
+def register():
+    '''View the register page.
+    '''
+    title = 'Register'
+    return render_template('register.html', title=title)    
