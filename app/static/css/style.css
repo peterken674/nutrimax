@@ -1,0 +1,74 @@
+:root{
+    --green: #28590C
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    font-size: 16px;
+}
+
+/* ####################### */
+nav{
+    height: 80px;
+    width: 100%;
+    background-color: var(--green);
+    text-decoration: none;
+    color: white;
+}
+
+nav .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav .nav-brand {
+    line-height: 80px;
+    text-transform: uppercase;
+    color: #FBFCEB;
+}
+
+.nav .nav-brand a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+}
+.nav ul li{
+    list-style: none;
+    display: inline-flex;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 1rem;
+}
+
+.nav ul li a{
+    color: #FBFCEB;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all linear 300ms;
+}
+
+.nav ul li a:hover,
+.nav ul li a:active {
+    color: white;
+    border-bottom: 2px solid white;
+
+}
+
+/* ####################### */
+
+.footer{
+    background-color: #3F3F3F;
+    bottom: 0;
+    height: 50px;
+    color: white;
+}
+.content{
+    margin-top: 120px;
+}
