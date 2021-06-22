@@ -18,4 +18,4 @@ class RegForm(FlaskForm):
     
     def validate_email(self, data_field):
         if User.query.filter_by(email = data_field.data).first():
-            raise validationError("The Email has already been taken!")
+            raise ValidationError("The Email has already been taken!")
