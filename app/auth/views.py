@@ -30,5 +30,5 @@ def signup():
        user.save_u()
        mail_message("Welcome to Nutrimax for the best diet","email/welcome_user",user.email,user=user)
        return redirect(url_for('auth.login'))
-    return render_template('auth/signup.html')
+    return render_template('auth/signup.html', form=form)
         
