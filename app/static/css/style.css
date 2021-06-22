@@ -72,3 +72,47 @@ nav .nav{
 .content{
     margin-top: 120px;
 }
+
+
+/*########  Homepage ##########*/
+
+
+.form-inline > form{
+    width:100% !important;
+    float:left;
+}
+
+.btn-default{
+    background-color: green;
+}
+
+body {
+    background-image: url('../images/lily-banse--YHSwy6uqvk-unsplash\ \(2\).jpg') ;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /*background-color: #ffa92032;*/
+    background-blend-mode:lighten;
+    
+}
+
+/* .site-information {
+    margin-top: 5%;
+}
+
+.card{
+    text-align: center;
+    padding:30px;
+    width: 85%;
+    border-radius: 10%;
+    height: 90%;
+    background-color: #e2900bdc;
+    color:white;
+    font-weight: bold;
+}
+
+.card-heading{
+    font-size: 35px;
+} */
+
+
