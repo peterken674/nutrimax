@@ -3,6 +3,7 @@ from . import auth
 from ..models import User
 from .forms import RegForm,LoginForm
 from flask_login import login_user,login_required,logout_user
+from ..email import mail_message
 
 @auth.route('/login', methods = ['GET','POST'])
 def login():
@@ -27,4 +28,7 @@ def signup():
     if form.validate_on_submit():
        user = User(email = form.email.data, username = form.username.data, password = form.password.data)
        user.save_u()
-       mail_meassage("Welcome to Nutrimax for the best diet") 
+       mail_meassage("Welcome to Nutrimax for the best diet","email/welcome_user",user.email,user=user)
+       return redirect(url_for('auth.login'))
+    return render_template('auth/signup.html')
+        
