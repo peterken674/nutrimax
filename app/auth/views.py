@@ -12,7 +12,7 @@ def login():
          user = User.query.filter_by(username = form.username.data).first()
          if user != None and user.verify_password(form.password.data):
             login_user(user,form.remember.data)
-            return redirect(request.args.get('next') or url_for('main.index'))
+            return redirect(request.args.get('next') or url_for('/index'))
          flash('Invalid username or Password')
     return render_template('auth/login.html', loginform = form)
 
@@ -20,7 +20,7 @@ def login():
 @login_required
 def logout():
     logout_user()
-    return redirect(url_for("main.index"))
+    return redirect(url_for("/index"))
 
 @auth.route('/signup', methods = ["GET","POST"])
 def signup():
