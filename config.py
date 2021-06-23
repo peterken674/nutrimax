@@ -4,8 +4,11 @@ class Config:
     '''
     General configuration parent class
     '''
-    SECRET_KEY = os.urandom(16)
+    SECRET_KEY = os.environ.get('SECRET_KEY')
     UPLOADED_PHOTOS_DEST = 'app/static/img'
+    BASE_URL = 'https://trackapi.nutritionix.com/v2/natural/nutrients'
+    X_APP_ID = os.environ.get('X_APP_ID')
+    X_APP_KEY = os.environ.get('X_APP_KEY')
     
     # Email configurations
     MAIL_SERVER = 'smtp.googlemail.com'
