@@ -3,7 +3,7 @@
 }
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -75,9 +75,19 @@ nav .nav{
 
 
 /*########  Homepage ##########*/
-.form-inline > form{
-    width:100% !important;
-    float:left;
+.message{
+    text-align:center;
+    color:rgb(238, 231, 231);
+    font-weight: 800;
+    font-style:italic ;
+    font-family: 'Dancing Script', cursive;
+}
+
+.less{
+    color:red;
+}
+.form-control{
+    width:50%;
 }
 
 .btn-default{
@@ -89,8 +99,9 @@ body {
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
-    /*background-color: #ffa92032;*/
-    background-blend-mode:lighten;
+    background-color: #ffa92025;
+    background-blend-mode:darken;
+    background-color: rgba(0, 0, 0, 0.555);
     
 }
 
@@ -112,5 +123,6 @@ body {
 .card-heading{
     font-size: 35px;
 } 
+
 
 
