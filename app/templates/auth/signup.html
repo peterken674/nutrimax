@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% import 'bootstrap/wtf.html' as wtf%}
+
 {% block content %}
     <div class="container">
         <div class="row">
@@ -13,3 +14,6 @@
         </div>
     </div>
 {% endblock %}
+{% block footer %}
+    {% include 'footer.html' %}
+{%endblock%}
