@@ -36,6 +36,9 @@ class User(UserMixin, db.Model):
     def verify_password(self, password):
         return check_password_hash(self.pass_secure, password)
 
+    def __repr__(self):
+        return f'User {self.username}'
+
 class Food:
     '''Class to define the food details received from the API response.
     '''
@@ -58,3 +61,4 @@ class Food:
         self.nf_potassium = nf_potassium
         self.photo = photo
         self.meal_type = meal_type
+    
