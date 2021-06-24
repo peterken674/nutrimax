@@ -322,6 +322,9 @@ th, td{
     text-align: center;
     width: 100%;
 }
+#search form{
+    width: 100%;
+}
 
 #search #query {
     width: 100%;

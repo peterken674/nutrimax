@@ -39,23 +39,25 @@
             <h3 class="nutrients-title text-dark">Nutritional Content</h3>
             <hr>
             <ul style="list-style-type:none">
-                <li>Total fats  <span class="float-end">{{ totals.nf_total_fat }}g</span></li>
+                <li>Total fats <span class="float-end">{{ '%0.2f' % totals.nf_total_fat | float}}g</span></li>
                 <hr>
-                <li>Saturated fats <span class="float-end">{{ totals.nf_saturated_fat }}g</span></li>
+                <li>Saturated fats <span class="float-end">{{'%0.2f' %  totals.nf_saturated_fat | float }}g</span></li>
                 <hr>
-                <li>Cholesterol <span class="float-end">{{ totals.nf_cholesterol }}g</span></li>
+                <li>Cholesterol <span class="float-end">{{ '%0.2f' % totals.nf_cholesterol | float}}g</span></li>
                 <hr>
-                <li>Sodium <span class="float-end">{{ totals.nf_sodium }}g</span></li>
+                <li>Sodium <span class="float-end">{{'%0.2f' % totals.nf_sodium | float }}g</span></li>
                 <hr>
-                <li>Total-carbohydrates <span class="float-end">{{ totals.nf_total_carbohydrates }}g</span></li>
+                <li>Total-carbohydrates <span
+                        class="float-end">{{ '%0.2f' % totals.nf_total_carbohydrates | float }}g</span>
+                </li>
                 <hr>
-                <li>Dietary fibre <span class="float-end">{{ totals.nf_dietary_fiber }}g</span></li>
+                <li>Dietary fibre <span class="float-end">{{ '%0.2f' % totals.nf_dietary_fiber | float }}g</span></li>
                 <hr>
-                <li>Sugars <span class="float-end">{{ totals.nf_sugars }}g</span></li>
+                <li>Sugars <span class="float-end">{{'%0.2f' %  totals.nf_sugars | float }}g</span></li>
                 <hr>
-                <li>Proteins <span class="float-end">{{ totals.nf_proteins }}g</span></li>
+                <li>Proteins <span class="float-end">{{ '%0.2f' % totals.nf_proteins | float }}g</span></li>
                 <hr>
-                <li>Potassium <span class="float-end">{{ totals.nf_potassium }}g</span></li>
+                <li>Potassium <span class="float-end">{{ '%0.2f' % totals.nf_potassium | float }}g</span></li>
             </ul>
         </div>
     </div>
