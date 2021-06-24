@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf%}
 {% block main %}
 {{ super() }}
 <div class="container">
-    <div class="container">
-        <input class="searchbar" type="text" placeholder="Search for food or exercise...">
-        <button class="submit-food">Submit</button>
-    </div>
+    <!-- <form class="container">
+        <input class="searchbar" type="text" name="food" id="food" placeholder="Search for a meal...">
+        <button class="submit-food">Search</button>
+    </form> -->
+    {{ wtf.quick_form(form) }}
     <h1 class="food-name">Results</h1>
     <h3 class="food-info">Food Information</h3>
     <div class="table">

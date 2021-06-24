@@ -4,7 +4,7 @@ from flask.globals import request
 from flask_login.utils import login_required
 from werkzeug.utils import redirect
 from . import main
-from .forms import FeedbackForm
+from .forms import FeedbackForm, SearchBar
 from ..email import mail_feedback
 from flask_login import current_user
 from ..requests import get_details
@@ -20,6 +20,7 @@ def index():
 def info():
     '''View the search page.
     '''
+    form = SearchBar()
     foods = get_details("3 burgers and fries and orange juice")
 
     nf_total_fat = 0.0
@@ -56,7 +57,7 @@ def info():
         totals = Total(nf_total_fat, nf_saturated_fat, nf_cholesterol, nf_sodium, nf_total_carbohydrates, nf_dietary_fiber, nf_sugars, nf_proteins, nf_potassium)
 
     title = 'Info | Nutrimax'
-    return render_template('food_info.html', title=title, foods=foods, totals=totals)
+    return render_template('food_info.html', title=title, foods=foods, totals=totals, form=form)
 
 @main.route('/about', methods=['GET', 'POST'])
 def about():
