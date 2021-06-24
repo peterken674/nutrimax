@@ -101,8 +101,9 @@ body {
     background-image: url('../images/lily-banse--YHSwy6uqvk-unsplash\ \(2\).jpg') ;
     background-size:cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
     background-color: #ffa92025;
+    height: 100vh;
     background-blend-mode:darken;
     background-color: rgba(0, 0, 0, 0.555);
     
@@ -116,7 +117,8 @@ body {
     text-align: center;
     padding:30px;
     width: 85%;
-    border-radius: 10%;
+    border-radius: 1rem;
+    min-height: 200px;
     height: 90%;
     background-color: #e2900bdc;
     color:white;
@@ -127,6 +129,46 @@ body {
     font-size: 35px;
 } 
 
+.login-form{
+    background-color: white;
+    text-align: left;
+    width: 100%;
+
+}
+.login-form input{
+    width: 100%;
+    box-shadow: none;
+    border: 1px solid green;
+}
+.login-form label{
+     color: rgb(82, 82, 82);
+     font-weight: 300;
+}
+.login-form #submit{
+    color: green;
+    background-color: white;
+    border: 1px solid green;
+    transition: 150ms;
+}
+.login-form #submit:hover{
+    color: white;
+    background-color: green;
+    border: 1px solid green;
+}
+.login-form h1{
+    color: green;
+}
+.login-form #remember{
+    width: initial;
+}
+.login-form #submit{
+    width: initial;
+}
+.login-form p{
+    color: #3F3F3F;
+    font-weight: 300;
+    margin-top: 1rem;
+}
 /* ============About Page============ */
 
 #about, #contact{

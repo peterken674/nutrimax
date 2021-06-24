@@ -5,29 +5,15 @@
         </div>
         <div class="nav-items">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="{{url_for('main.index')}}">Home</a></li>
+                <li><a href="#">Search</a></li>
                 <li><a href="{{url_for('main.about')}}">About</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Logout</a></li>
+                {% if current_user.is_authenticated %}
+                <li><a href="{{url_for('auth.logout')}}">Logout ({{ current_user.username }})</a></li>
+                {% else %}
+                <li><a href="{{url_for('auth.login')}}">Login</a></li>
+                {% endif %}
             </ul> 
         </div>
-        <div class="logout-div">
-        
-			{% if current_user.is_authenticated %}
-                <div class="logged_in_user mx-3">
-                    <h3>{{ current_user.username }}</h3></div>
-                <div class="logout-btn">
-				<form action="{{url_for('auth.logout')}}">
-                    <button type="submit" class="btn logout">Log Out</button>
-                </form>
-			</div>
-            {% else %}
-            <div class="logout-btn">
-				<form action="{{url_for('auth.login')}}">
-                    <button type="submit" class="btn logout">Log In</button>
-                </form>
-			</div>
-            {% endif %}
-		</div>
     </div>
 </nav>

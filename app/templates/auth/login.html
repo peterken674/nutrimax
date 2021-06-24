@@ -8,16 +8,19 @@
 <div class="container"> 
     <div class="row" id="particle-js">
       <div class= "col-md-3"></div>
-      <div class="col-md-6" id="login">
-          <h3 class="text-center"><i class="fas fa-sign-in-alt text-center"></i>&nbsp; <strong class="text-center" >Log In Here</strong></h3> 
-   <!-- flash message        -->
-        <div class="alert alert-danger">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-        {{ get_flashed_messages()[-1] }}
-        </div>
-      
-      {{wtf.quick_form(loginform)}}
-      <p> Don't have an account? <a id="sign" href="{{url_for('auth.signup')}}">Sign up here</a></p>
+      <div class="col-md-6" id="login"> 
+      <div class="login-form card mt-5">
+          <h3 class="text-dark">Log In</h3>
+          <!-- flash message        -->
+          {% if get_flashed_messages()%}
+          <div class="alert alert-danger">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              {{ get_flashed_messages()[-1] }}
+          </div>
+          {% endif %}
+          {{wtf.quick_form(loginform)}}
+          <p class="mb-1"> Don't have an account? <a id="sign" href="{{url_for('auth.signup')}}">Sign up here</a></p>
+      </div>
      </div>
      <div clas="col-md-3"> </div>
     </div>
