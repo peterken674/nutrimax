@@ -1,64 +1,67 @@
 {% extends 'base.html' %}
+{% block main %}
+{{ super() }}
 <div class="container">
-    <div class="container" >
+    <div class="container">
         <input class="searchbar" type="text" placeholder="Search for food or exercise...">
-        <button class="submit-food">submit</button>
+        <button class="submit-food">Submit</button>
     </div>
     <h1 class="food-name">Chips and Chicken</h1>
     <h3 class="food-info">Food Information</h3>
     <div class="table">
-      <table>
-        <tr>
-          <th>Food image</th>
-          <th>Food name </th>
-          <th>Qty</th>
-          <th>Unit</th>
-          <th>Calories</th>
-          <th>Weight</th>
-          <th>Food group</th>
-        </tr>
-        <tr>
-          <td>image</td>
-          <td>Fried chicken</td>
-          <td>1</td>
-          <td>Piece</td>
-          <td>376.6kcal</td>
-          <td>140g</td>
-          <td>Combination</td>
-        </tr>
-        <tr>
-          <td>image</td>
-          <td>Chips</td>
-          <td>1</td>
-          <td>oz</td>
-          <td>148.96 kcal</td>
-          <td>28g</td>
-          <td>Combination</td>
-        </tr>
-      </table>
+        <table>
+            <tr>
+                <th>Food image</th>
+                <th>Food name </th>
+                <th>Qty</th>
+                <th>Unit</th>
+                <th>Calories</th>
+                <th>Weight</th>
+                <th>Food group</th>
+            </tr>
+            <tr>
+                <td>image</td>
+                <td>Fried chicken</td>
+                <td>1</td>
+                <td>Piece</td>
+                <td>376.6kcal</td>
+                <td>140g</td>
+                <td>Combination</td>
+            </tr>
+            <tr>
+                <td>image</td>
+                <td>Chips</td>
+                <td>1</td>
+                <td>oz</td>
+                <td>148.96 kcal</td>
+                <td>28g</td>
+                <td>Combination</td>
+            </tr>
+        </table>
     </div>
     <div>
-      <h3 class="nutrients-title">Nutritional Facts</h3>
-      <div class="card nutrients">
-        <ul style="list-style-type:none">
-          <li>Total fats</li>
-          <hr>
-          <li>Saturated fats</li>
-          <hr>
-          <li>Cholesterol</li>
-          <hr>
-          <li>Sodium</li>
-          <hr>
-          <li>Total-carbohydrates</li>
-          <hr>
-          <li>Dietary fibre</li>
-          <hr>
-          <li>Sugars</li>
-          <hr>
-          <li>Proteins</li>
-          <hr>
-          <li>Potassium</li>
-        </ul>
-          </div>
+        <h3 class="nutrients-title">Nutritional Facts</h3>
+        <div class="card nutrients">
+            <ul style="list-style-type:none">
+                <li>Total fats</li>
+                <hr>
+                <li>Saturated fats</li>
+                <hr>
+                <li>Cholesterol</li>
+                <hr>
+                <li>Sodium</li>
+                <hr>
+                <li>Total-carbohydrates</li>
+                <hr>
+                <li>Dietary fibre</li>
+                <hr>
+                <li>Sugars</li>
+                <hr>
+                <li>Proteins</li>
+                <hr>
+                <li>Potassium</li>
+            </ul>
+        </div>
     </div>
     <button class="save">Save This Food</button>
+{%endblock%}

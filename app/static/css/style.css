@@ -109,6 +109,7 @@ body {
     height: 100vh;
     background-blend-mode:darken;
     background-color: rgba(0, 0, 0, 0.555);
+    background-attachment: fixed;
     
 }
 
