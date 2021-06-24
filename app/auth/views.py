@@ -31,14 +31,9 @@ def signup():
        db.session.add(user)
        db.session.commit()
 
-<<<<<<< HEAD
-       mail_message("Welcome to Nutrimax for the best diet","email/welcome_user", user.email,user=user)
-       
-=======
        mail_message("Welcome to Nutrimax for the best diet","email/welcome_user",
                     user.email,user=user)
        return redirect(url_for("auth.login"))
->>>>>>> 28c95a91de28266bd1d9f5a054803f4da5a3a9f6
        
     title = "New Account | NTMX"       
     return render_template('auth/signup.html',registration_form =form, form=form)
