@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kirang+Haerang&family=Viaoda+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Kirang+Haerang&family=Viaoda+Libre&display=swap');
 :root{
     --green: #28590C
 }
@@ -223,5 +226,43 @@ table,td{
     background-color: white;
     color: brown;
 }
+
+/* ============About Page============ */
+
+#about, #contact{
+    height: auto;
+    width: 100%;
+    
+}
+#aboutCard{
+    background-color: white;
+    min-height: 50vh;
+    border-radius: 1rem;
+    color: rgb(80, 80, 80);
+}
+
+.feedback textarea{
+    width: 100%;
+    height: 10vh;
+    border: 1px solid green;
+    box-shadow: none;
+}
+.feedback #subject{
+    width: 100%;
+    border: 1px solid green;
+    box-shadow: none;
+}
+.feedback #submit{
+    background-color: white;
+    border: 1px solid green;
+    color: green;
+    transition: 150ms;
+}
+.feedback #submit:hover{
+    color: white;
+    background-color: green;
+    border: 1px solid green;
+}
+/* ===================================== */
 
 
