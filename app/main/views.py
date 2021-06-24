@@ -6,6 +6,7 @@ from . import main
 from .forms import FeedbackForm
 from ..email import mail_feedback
 from flask_login import current_user
+from ..requests import get_details
 
 @main.route('/')
 def index():
@@ -16,15 +17,19 @@ def index():
 
 @main.route('/info')
 def info():
-    '''View the index page.
+    '''View the search page.
     '''
-    title = 'Info'
-    return render_template('food_info.html', title=title)
+    foods = get_details("3 chapatis and bean")
+
+
+
+    title = 'Info | Nutrimax'
+    return render_template('food_info.html', title=title, foods=foods)
 
 @main.route('/about', methods=['GET', 'POST'])
 def about():
     form = FeedbackForm()
-    title = 'About - Nutrimax'
+    title = 'About | Nutrimax'
 
     
     if form.validate_on_submit():

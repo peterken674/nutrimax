@@ -6,7 +6,7 @@
         <input class="searchbar" type="text" placeholder="Search for food or exercise...">
         <button class="submit-food">Submit</button>
     </div>
-    <h1 class="food-name">Chips and Chicken</h1>
+    <h1 class="food-name">Results</h1>
     <h3 class="food-info">Food Information</h3>
     <div class="table">
         <table>
@@ -17,26 +17,19 @@
                 <th>Unit</th>
                 <th>Calories</th>
                 <th>Weight</th>
-                <th>Food group</th>
+                <!-- <th>Food group</th> -->
             </tr>
+            {% for food in foods %}
             <tr>
-                <td>image</td>
-                <td>Fried chicken</td>
-                <td>1</td>
-                <td>Piece</td>
-                <td>376.6kcal</td>
-                <td>140g</td>
-                <td>Combination</td>
+                <td><img src="{{food.photo['thumb']}}" alt=""></td>
+                <td>{{food.food_name}}</td>
+                <td>{{food.serving_qty}}</td>
+                <td>{{food.serving_unit}}</td>
+                <td>{{food.nf_calories}} kcal</td>
+                <td>{{food.serving_weight_grams}}g</td>
+                <!-- <td>{{food.meal_type}}</td> -->
             </tr>
-            <tr>
-                <td>image</td>
-                <td>Chips</td>
-                <td>1</td>
-                <td>oz</td>
-                <td>148.96 kcal</td>
-                <td>28g</td>
-                <td>Combination</td>
-            </tr>
+            {% endfor %}
         </table>
     </div>
     <div>
