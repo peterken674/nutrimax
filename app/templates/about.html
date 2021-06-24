@@ -22,10 +22,12 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic distinctio ipsam, itaque eum aut
                         assumenda dicta molestias harum repellendus dolorum doloribus est.</p>
                     <div class="feedback">
+                        {% if get_flashed_messages()%}
                         <div class="alert alert-danger">
                             <button type="button" class="close" data-dismiss="alert">&times;</button>
                             {{ get_flashed_messages()[-1] }}
                         </div>
+                        {% endif %}
                         {{ wtf.quick_form(form)}}
                     </div>
                 </div>

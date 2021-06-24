@@ -26,15 +26,17 @@ def about():
     form = FeedbackForm()
     title = 'About - Nutrimax'
 
-    if current_user.is_authenticated:
-        if form.validate_on_submit():
-            feedback = form.feedback.data + " Sender: {sender.fname} {sender.lname}"
-            subject = form.subject.data
+    
+    if form.validate_on_submit():
+        if current_user.is_authenticated:
             sender = current_user
+            feedback = form.feedback.data + " Sender: {} {} ({})".format(sender.fname, sender.lname, sender.email)
+            subject = form.subject.data
+            
 
             mail_feedback(subject, feedback, 'feedback@gmail.com')
             return redirect(request.referrer)
-    else:
-        flash('Please log in first to submit feedback.')
+        else:
+            flash('Please log in first to submit feedback.')
 
     return render_template('about.html', title=title, form=form)
