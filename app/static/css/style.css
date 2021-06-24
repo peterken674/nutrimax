@@ -147,13 +147,10 @@ body {
     border: 1px solid green;
     box-shadow: none;
 }
-.feedback #email{
+.feedback #subject{
     width: 100%;
     border: 1px solid green;
     box-shadow: none;
-}
-.feedback label{
-    font-weight: 300;
 }
 .feedback #submit{
     background-color: white;
