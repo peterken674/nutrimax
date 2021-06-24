@@ -7,12 +7,12 @@
         <input class="searchbar" type="text" name="food" id="food" placeholder="Search for a meal...">
         <button class="submit-food">Search</button>
     </form> -->
-    {{ wtf.quick_form(form) }}
+    <div id="search">{{ wtf.quick_form(form) }}</div>
     <h1 class="food-name">Results</h1>
-    <h3 class="food-info">Food Information</h3>
     <div class="table">
+        
         <table>
-            <tr>
+            <tr class="py-3">
                 <th>Food image</th>
                 <th>Food name </th>
                 <th>Qty</th>
@@ -35,8 +35,9 @@
         </table>
     </div>
     <div>
-        <h3 class="nutrients-title">Nutritional Facts</h3>
-        <div class="card nutrients">
+        <div class="card nutrients mb-5">
+            <h3 class="nutrients-title text-dark">Nutritional Content</h3>
+            <hr>
             <ul style="list-style-type:none">
                 <li>Total fats  <span class="float-end">{{ totals.nf_total_fat }}g</span></li>
                 <hr>
@@ -58,5 +59,4 @@
             </ul>
         </div>
     </div>
-    <button class="save">Save This Food</button>
 {%endblock%}

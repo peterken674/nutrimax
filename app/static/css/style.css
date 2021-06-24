@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kirang+Haerang&family=Viaoda+Libre&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Kirang+Haerang&family=Viaoda+Libre&display=swap');
-:root{
-    --green: #28590C
-}
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+:root {
+    --green: #28590C
+}
 * {
     margin: 0;
     padding: 0;
@@ -162,7 +162,8 @@ body {
     float:left;
     color:white;
     font-size: 20px;
-    font-family: 'Kirang Haerang', cursive;
+    font-family: 'Poppins',
+    sans-serif;
     width: 100%;
     overflow-x: scroll;
 }
@@ -182,9 +183,9 @@ th, td{
     margin-top: 7%;
     text-align: center;
     font-weight: 900;
-    text-decoration: underline;
     color:white;
-    font-family: 'Kirang Haerang', cursive;
+    font-family: 'Poppins',
+    sans-serif;
     font-size: 50px;
 }
 .food-info{
@@ -194,28 +195,26 @@ th, td{
     color:white;
     font-size: 40px;
     /* text-decoration: underline; */
-    font-family: 'Kirang Haerang', cursive;
+    font-family: 'Poppins',
+    sans-serif;
 }
 .nutrients {
     background-color: white;
-    margin-left: 20%;
     border-radius: 1rem;
-    width: 60%;
     color:rgb(51, 51, 51);
-    font-family: 'Kirang Haerang', cursive;
-    font-size: 20px;
-    margin-bottom: 6%;
+    font-family: 'Poppins',
+    sans-serif;
+    width: 100%;
     text-align: left !important;
     font-weight: 300;
 }
 .nutrients-title{
     text-align: center;
-    text-decoration: underline;
     color:white;
-    margin-top:30% ;
     margin-bottom: 5%;
     font-size: 40px;
-    font-family: 'Kirang Haerang', cursive;
+    font-family: 'Poppins',
+    sans-serif;
 }
 .save {
     background-color: #4CAF50;
@@ -315,3 +314,37 @@ th, td{
     border: 1px solid green;
 }
 /* ===================================== */
+/* Searchbar */
+#search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+#search #query {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 4rem;
+}
+
+#search #submit {
+    color: white;
+    border-radius: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+#search #submit:hover {
+    background-color: white;
+    color: green;
+}
+table{
+    border-radius: 1rem;
+    border: none;
+}
+th{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}

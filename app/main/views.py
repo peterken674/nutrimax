@@ -21,42 +21,46 @@ def info():
     '''View the search page.
     '''
     form = SearchBar()
-
+    foods = []
+    totals = []
+    query = "burger"
+    foods = get_details(query)
     if request.method=='POST' and form.validate_on_submit:
+        foods = []
         query = form.query.data
         # print(query)
         foods = get_details(query)
 
-        nf_total_fat = 0.0
-        nf_saturated_fat = 0.0
-        nf_cholesterol = 0.0
-        nf_sodium = 0.0
-        nf_total_carbohydrates = 0.0
-        nf_dietary_fiber = 0.0
-        nf_sugars = 0.0
-        nf_proteins = 0.0
-        nf_potassium = 0.0
+    nf_total_fat = 0.0
+    nf_saturated_fat = 0.0
+    nf_cholesterol = 0.0
+    nf_sodium = 0.0
+    nf_total_carbohydrates = 0.0
+    nf_dietary_fiber = 0.0
+    nf_sugars = 0.0
+    nf_proteins = 0.0
+    nf_potassium = 0.0
 
 
-        for food in foods:
-            if food.nf_total_fat:
-                nf_total_fat += food.nf_total_fat
-            if food.nf_saturated_fat:    
-                nf_saturated_fat += food.nf_saturated_fat
-            if food.nf_cholesterol: 
-                nf_cholesterol += food.nf_cholesterol 
-            if food.nf_sodium:
-                nf_sodium += food.nf_sodium 
-            if food.nf_total_carbohydrates:
-                nf_total_carbohydrates += food.nf_total_carbohydrates
-            if food.nf_dietary_fiber:
-                nf_dietary_fiber += food.nf_dietary_fiber
-            if food.nf_sugars:
-                nf_sugars += food.nf_sugars
-            if food.nf_proteins:
-                nf_proteins += food.nf_proteins
-            if food.nf_potassium:
-                nf_potassium += food.nf_potassium
+    for food in foods:
+        if food.nf_total_fat:
+            nf_total_fat += food.nf_total_fat
+        if food.nf_saturated_fat:    
+            nf_saturated_fat += food.nf_saturated_fat
+        if food.nf_cholesterol: 
+            nf_cholesterol += food.nf_cholesterol 
+        if food.nf_sodium:
+            nf_sodium += food.nf_sodium 
+        if food.nf_total_carbohydrates:
+            nf_total_carbohydrates += food.nf_total_carbohydrates
+        if food.nf_dietary_fiber:
+            nf_dietary_fiber += food.nf_dietary_fiber
+        if food.nf_sugars:
+            nf_sugars += food.nf_sugars
+        if food.nf_proteins:
+            nf_proteins += food.nf_proteins
+        if food.nf_potassium:
+            nf_potassium += food.nf_potassium
 
             totals = Total(nf_total_fat, nf_saturated_fat, nf_cholesterol, nf_sodium, nf_total_carbohydrates, nf_dietary_fiber, nf_sugars, nf_proteins, nf_potassium)
 
