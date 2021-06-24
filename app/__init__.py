@@ -34,6 +34,9 @@ def create_app(config_name):
     from .auth import auth as auth_blueprint
     app.register_blueprint(auth_blueprint, url_prefix ='/auth')
 
+    from .requests import configure_nutrients_request
+    configure_nutrients_request(app)
+
     configure_uploads(app, photos)
 
     return app
