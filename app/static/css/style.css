@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kirang+Haerang&family=Viaoda+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Kirang+Haerang&family=Viaoda+Libre&display=swap');
 :root{
     --green: #28590C
 }
@@ -128,6 +131,103 @@ body {
 .card-heading{
     font-size: 35px;
 } 
+.searchbar{
+    width: 60%;
+    padding: 17px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    margin-left: 15%;
+    border-radius: 8px;
+}
+.submit-food {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    background-color:#4CAF50;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+}
+.submit-food:hover {
+    color: white;
+}
+.table {
+    text-align: center;
+    margin-top: 40px;
+    float:left;
+    color:white;
+    font-size: 20px;
+    font-family: 'Kirang Haerang', cursive;
+}
+table,td{
+    border-collapse: collapse;
+    border: 1px black solid;
+    padding: 40px;
+    background-color: rgba(190, 23, 23, 0.685);
+    margin-left: 12%;
+}
+.food-name {
+    margin-top: 7%;
+    text-align: center;
+    font-weight: 900;
+    text-decoration: underline;
+    color:white;
+    font-family: 'Kirang Haerang', cursive;
+    font-size: 50px;
+}
+.food-info{
+    text-align: center;
+    margin-top: 3%;
+    font-weight: 700px;
+    color:white;
+    font-size: 40px;
+    text-decoration: underline;
+    font-family: 'Kirang Haerang', cursive;
+}
+.nutrients {
+    background-color: #ffa920e5;
+    color: black;
+    margin-left: 20%;
+    border-radius: 2%;
+    width: 60%;
+    color:white;
+    font-family: 'Kirang Haerang', cursive;
+    font-size: 20px;
+    margin-bottom: 6%;
+}
+.nutrients-title{
+    text-align: center;
+    text-decoration: underline;
+    color:white;
+    margin-top:30% ;
+    margin-bottom: 5%;
+    font-size: 40px;
+    font-family: 'Kirang Haerang', cursive;
+}
+.save {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-bottom: 15%;
+    margin-left:40%;
+}
+.save:hover {
+    background-color: white;
+    color: brown;
+}
 
 .login-form{
     background-color: white;
