@@ -6,6 +6,7 @@ from flask_login import login_user,login_required,logout_user
 from ..email import mail_message
 from .. import db
 import datetime as dt
+import pyotp
 
 
 @auth.route('/login', methods = ['GET','POST'])
