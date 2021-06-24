@@ -33,7 +33,7 @@ def signup():
 
        mail_message("Welcome to Nutrimax for the best diet","email/welcome_user",
                     user.email,user=user)
-       
+       return redirect(url_for("auth.login"))
        
     title = "New Account | NTMX"       
     return render_template('auth/signup.html',registration_form =form, form=form)
