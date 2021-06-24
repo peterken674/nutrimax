@@ -15,17 +15,9 @@ def info():
     title = 'Info'
     return render_template('food_info.html', title=title)
 
-@main.route('/login')
-def login():
-    '''View the login page.
-    '''
-    title = 'Login'
-    return render_template('login.html', title=title)
+@main.route('/about')
+def about():
 
-@main.route('/signup')
-def signup():
-    '''View the signup page.
-    '''
-    title = 'Signup'
-    return render_template('signup.html', title=title)
+    title = 'About - Nutrimax'
+    return render_template('about.html', title=title)
 

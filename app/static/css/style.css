@@ -127,5 +127,18 @@ body {
     font-size: 35px;
 } 
 
+/* ============About Page============ */
+
+#about, #contact{
+    height: auto;
+    width: 100%;
+    
+}
+#aboutCard{
+    background-color: white;
+    min-height: 50vh;
+    border-radius: 1rem;
+}
+/* ===================================== */
 
 
