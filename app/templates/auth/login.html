@@ -1,31 +1,30 @@
 {% extends 'base.html' %}
 {% import 'bootstrap/wtf.html' as wtf%}
-{% block content %}
-{% block styles %}
-{{super()}}
-<link rel="stylesheet" href="{{url_for('static',filename='css/particle.css')}}">
-{% endblock %}
-<div class="container"> 
-    <div class="row" id="particle-js">
-      <div class= "col-md-3"></div>
-      <div class="col-md-6" id="login"> 
-      <div class="login-form card mt-5">
-          <h3 class="text-dark">Log In</h3>
-          <!-- flash message        -->
-          {% if get_flashed_messages()%}
-          <div class="alert alert-danger">
-              <button type="button" class="close" data-dismiss="alert">&times;</button>
-              {{ get_flashed_messages()[-1] }}
-          </div>
-          {% endif %}
-          {{wtf.quick_form(loginform)}}
-          <p class="mb-1"> Don't have an account? <a id="sign" href="{{url_for('auth.signup')}}">Sign up here</a></p>
-      </div>
-     </div>
-     <div clas="col-md-3"> </div>
+
+{% block main %}
+{{ super() }}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6 login-form card mt-5">
+                <h3 class="text-dark">Log In</h3>
+                <!-- Flash message        -->
+                {% if get_flashed_messages()%}
+                <div class="alert alert-danger">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    {{ get_flashed_messages()[-1] }}
+                </div>
+                {% endif %}
+                {{wtf.quick_form(loginform)}}
+                <p class="mb-1"> Don't have an account? <a id="sign" href="{{url_for('auth.signup')}}">Sign up here</a>
+                </p>
+        </div>
+        <div clas="col-lg-3"></div>
     </div>
 </div>
 {% endblock %}
+
 {% block footer %}
-    {% include 'footer.html' %}
+{% include 'footer.html' %}
 {%endblock%}

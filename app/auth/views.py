@@ -19,8 +19,9 @@ def login():
         
         
          flash('Invalid username or Password')
+    title = 'Login | Nutrimax'
          
-    return render_template('auth/login.html', loginform = form)
+    return render_template('auth/login.html', loginform = form, title=title)
 
 
 @auth.route('/signup', methods = ["GET","POST"])
@@ -35,8 +36,8 @@ def signup():
                     user.email,user=user)
        return redirect(url_for("auth.login"))
        
-    title = "New Account | NTMX"       
-    return render_template('auth/signup.html',registration_form =form, form=form)
+    title = "New Account | Nutrimax"       
+    return render_template('auth/signup.html',registration_form =form, form=form, title=title)
         
         
 @auth.route('/logout')
