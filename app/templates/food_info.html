@@ -21,7 +21,7 @@
             </tr>
             {% for food in foods %}
             <tr>
-                <td><img src="{{food.photo['thumb']}}" alt=""></td>
+                <td><img src="{{food.photo['thumb']}}" alt="Food Pic"></td>
                 <td>{{food.food_name}}</td>
                 <td>{{food.serving_qty}}</td>
                 <td>{{food.serving_unit}}</td>
@@ -36,23 +36,23 @@
         <h3 class="nutrients-title">Nutritional Facts</h3>
         <div class="card nutrients">
             <ul style="list-style-type:none">
-                <li>Total fats</li>
+                <li>Total fats  <span class="float-end">{{ totals.nf_total_fat }}g</span></li>
                 <hr>
-                <li>Saturated fats</li>
+                <li>Saturated fats <span class="float-end">{{ totals.nf_saturated_fat }}g</span></li>
                 <hr>
-                <li>Cholesterol</li>
+                <li>Cholesterol <span class="float-end">{{ totals.nf_cholesterol }}g</span></li>
                 <hr>
-                <li>Sodium</li>
+                <li>Sodium <span class="float-end">{{ totals.nf_sodium }}g</span></li>
                 <hr>
-                <li>Total-carbohydrates</li>
+                <li>Total-carbohydrates <span class="float-end">{{ totals.nf_total_carbohydrates }}g</span></li>
                 <hr>
-                <li>Dietary fibre</li>
+                <li>Dietary fibre <span class="float-end">{{ totals.nf_dietary_fiber }}g</span></li>
                 <hr>
-                <li>Sugars</li>
+                <li>Sugars <span class="float-end">{{ totals.nf_sugars }}g</span></li>
                 <hr>
-                <li>Proteins</li>
+                <li>Proteins <span class="float-end">{{ totals.nf_proteins }}g</span></li>
                 <hr>
-                <li>Potassium</li>
+                <li>Potassium <span class="float-end">{{ totals.nf_potassium }}g</span></li>
             </ul>
         </div>
     </div>
