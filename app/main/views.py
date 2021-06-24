@@ -1,5 +1,6 @@
 from flask import render_template
 from . import main
+from .forms import FeedbackForm
 
 @main.route('/')
 def index():
@@ -17,7 +18,7 @@ def info():
 
 @main.route('/about')
 def about():
-
+    form = FeedbackForm()
     title = 'About - Nutrimax'
-    return render_template('about.html', title=title)
+    return render_template('about.html', title=title, form=form)
 

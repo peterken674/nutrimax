@@ -138,6 +138,33 @@ body {
     background-color: white;
     min-height: 50vh;
     border-radius: 1rem;
+    color: rgb(80, 80, 80);
+}
+
+.feedback textarea{
+    width: 100%;
+    height: 10vh;
+    border: 1px solid green;
+    box-shadow: none;
+}
+.feedback #email{
+    width: 100%;
+    border: 1px solid green;
+    box-shadow: none;
+}
+.feedback label{
+    font-weight: 300;
+}
+.feedback #submit{
+    background-color: white;
+    border: 1px solid green;
+    color: green;
+    transition: 150ms;
+}
+.feedback #submit:hover{
+    color: white;
+    background-color: green;
+    border: 1px solid green;
 }
 /* ===================================== */
 
