@@ -29,8 +29,8 @@ def about():
     
     if form.validate_on_submit():
         if current_user.is_authenticated:
-            sender = current_user
-            feedback = form.feedback.data + " Sender: {} {} ({})".format(sender.fname, sender.lname, sender.email)
+            # sender = current_user
+            feedback = form.feedback.data 
             subject = form.subject.data
             
 
