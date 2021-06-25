@@ -4,6 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic);
 :root {
     --green: #28590C
 }
@@ -35,6 +36,7 @@ nav .nav{
     line-height: 80px;
     text-transform: uppercase;
     color: #FBFCEB;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .nav .nav-brand a {
@@ -86,7 +88,7 @@ nav .nav{
     color:rgb(238, 231, 231);
     font-weight: 800;
     font-style:italic ;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .less{
