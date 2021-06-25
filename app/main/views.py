@@ -1,5 +1,5 @@
 from ..models import Total
-from flask import render_template, flash
+from flask import render_template, flash, url_for
 from flask.globals import request
 from flask_login.utils import login_required
 from werkzeug.utils import redirect
@@ -8,6 +8,7 @@ from .forms import FeedbackForm, SearchBar
 from ..email import mail_feedback
 from flask_login import current_user
 from ..requests import get_details
+import os
 
 @main.route('/')
 def index():
@@ -77,13 +78,16 @@ def about():
     if form.validate_on_submit():
         if current_user.is_authenticated:
             # sender = current_user
-            feedback = form.feedback.data 
-            subject = form.subject.data
+            feedback = form.feedback.data + " Sent by {}, email: {}".format(current_user.username, current_user.email)
+            subject = form.subject.data 
+            recipient = os.environ.get('MAIL_USERNAME')
             
 
-            mail_feedback(subject, feedback, 'feedback@gmail.com')
+            mail_feedback(subject, feedback, recipient)
+            flash('Feedback successfully sent.', 'success')
             return redirect(request.referrer)
         else:
             flash('Please log in first to submit feedback.')
+            return redirect(url_for('auth.login'))
 
     return render_template('about.html', title=title, form=form)
