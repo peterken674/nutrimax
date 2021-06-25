@@ -35,7 +35,7 @@ def get_details(query):
 
     with request.urlopen(req, data=data) as url:
         get_nutrients_data = url.read()
-        get_nutrients_response = json.loads(get_nutrients_data)
+        get_nutrients_response = json.loads(get_nutrients_data)./
 
         details_results = None
 
