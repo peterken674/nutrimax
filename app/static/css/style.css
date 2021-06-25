@@ -128,7 +128,7 @@ body {
     height: 90%;
     background-color: #e2900bdc;
     color:white;
-    font-weight: bold;
+    box-shadow: -2px -2px 5px white;
 }
 
 .card-heading{

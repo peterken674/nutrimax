@@ -17,6 +17,7 @@ def index():
     return render_template('index.html', title=title)
 
 @main.route('/info', methods = ['GET','POST'])
+@login_required
 def info():
     '''View the search page.
     '''
