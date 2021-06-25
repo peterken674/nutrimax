@@ -61,4 +61,19 @@ class Food:
         self.nf_potassium = nf_potassium
         self.photo = photo
         self.meal_type = meal_type
+
+class Total:
+
+    def __init__(self, nf_total_fat, nf_saturated_fat, nf_cholesterol, nf_sodium, nf_total_carbohydrates, nf_dietary_fiber, nf_sugars, nf_proteins, nf_potassium):
+        self.nf_total_fat = nf_total_fat
+        self.nf_saturated_fat = nf_saturated_fat
+        self.nf_cholesterol = nf_cholesterol
+        self.nf_sodium = nf_sodium
+        self.nf_total_carbohydrates = nf_total_carbohydrates
+        self.nf_dietary_fiber = nf_dietary_fiber
+        self.nf_sugars = nf_sugars
+        self.nf_proteins = nf_proteins
+        self.nf_potassium = nf_potassium
+
+        
     

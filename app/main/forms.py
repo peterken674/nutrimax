@@ -10,4 +10,9 @@ class FeedbackForm(FlaskForm):
     feedback = TextAreaField('', validators=[Required()], render_kw={'placeholder':'Write us your feedback...'})
     
     submit = SubmitField('Send')
+
+class SearchBar(FlaskForm):
+    query = StringField('', validators=[Required()], render_kw={'placeholder':'Search for a meal...'})
+    submit = SubmitField('Search')
+
     

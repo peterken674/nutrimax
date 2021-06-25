@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kirang+Haerang&family=Viaoda+Libre&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Kirang+Haerang&family=Viaoda+Libre&display=swap');
-:root{
-    --green: #28590C
-}
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+:root {
+    --green: #28590C
+}
 * {
     margin: 0;
     padding: 0;
@@ -109,6 +109,7 @@ body {
     height: 100vh;
     background-blend-mode:darken;
     background-color: rgba(0, 0, 0, 0.555);
+    background-attachment: fixed;
     
 }
 
@@ -161,22 +162,30 @@ body {
     float:left;
     color:white;
     font-size: 20px;
-    font-family: 'Kirang Haerang', cursive;
+    font-family: 'Poppins',
+    sans-serif;
+    width: 100%;
+    overflow-x: scroll;
 }
 table,td{
     border-collapse: collapse;
     border: 1px black solid;
-    padding: 40px;
-    background-color: rgba(190, 23, 23, 0.685);
-    margin-left: 12%;
+    padding: 1rem;
+    background-color: white;
+    color: rgb(70, 70, 70);
+    table-layout: fixed;
+    width: 100%;
+}
+th, td{
+    width: 5rem;
 }
 .food-name {
     margin-top: 7%;
     text-align: center;
     font-weight: 900;
-    text-decoration: underline;
     color:white;
-    font-family: 'Kirang Haerang', cursive;
+    font-family: 'Poppins',
+    sans-serif;
     font-size: 50px;
 }
 .food-info{
@@ -185,28 +194,27 @@ table,td{
     font-weight: 700px;
     color:white;
     font-size: 40px;
-    text-decoration: underline;
-    font-family: 'Kirang Haerang', cursive;
+    /* text-decoration: underline; */
+    font-family: 'Poppins',
+    sans-serif;
 }
 .nutrients {
-    background-color: #ffa920e5;
-    color: black;
-    margin-left: 20%;
-    border-radius: 2%;
-    width: 60%;
-    color:white;
-    font-family: 'Kirang Haerang', cursive;
-    font-size: 20px;
-    margin-bottom: 6%;
+    background-color: white;
+    border-radius: 1rem;
+    color:rgb(51, 51, 51);
+    font-family: 'Poppins',
+    sans-serif;
+    width: 100%;
+    text-align: left !important;
+    font-weight: 300;
 }
 .nutrients-title{
     text-align: center;
-    text-decoration: underline;
     color:white;
-    margin-top:30% ;
     margin-bottom: 5%;
     font-size: 40px;
-    font-family: 'Kirang Haerang', cursive;
+    font-family: 'Poppins',
+    sans-serif;
 }
 .save {
     background-color: #4CAF50;
@@ -306,3 +314,40 @@ table,td{
     border: 1px solid green;
 }
 /* ===================================== */
+/* Searchbar */
+#search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+#search form{
+    width: 100%;
+}
+
+#search #query {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 4rem;
+}
+
+#search #submit {
+    color: white;
+    border-radius: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+#search #submit:hover {
+    background-color: white;
+    color: green;
+}
+table{
+    border-radius: 1rem;
+    border: none;
+}
+th{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
